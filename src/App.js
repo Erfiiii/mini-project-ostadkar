@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Output from './Components/Output/Output';
+import Input from "./Components/Input/Input";
 import "./App.css";
 
 class App extends Component {
@@ -25,6 +27,9 @@ class App extends Component {
   };
 
   handleCHange = e => {
+
+    // FOR NOT MUTATING THE STATE
+
     let selectedValueIndex = this.state.inputs.findIndex(
       val => val.name === e.target.value
     );
@@ -60,31 +65,28 @@ class App extends Component {
 
   };
 
+
+  resetLayout = ()=> {
+    return window.location.reload()
+  }
+
   render() {
     return (
       <div className="App">
         <div className="input">Inputs: {this.state.inputStrings}</div>
-        <div className="custom-select">
-          <select onChange={this.handleCHange} value="" placeholder="select">
-            <option></option>
-            <option value="XL">XL</option>
-            <option value="L">L</option>
-            <option value="SM">SM</option>
-          </select>
-        </div>
+        <Input onSelectChange={this.handleCHange}></Input>
         <div className="output">
           {this.state.inputs.map((val, index) => {
             let vals = [];
             for (let i = 0; i < val.count; i++) {
               vals.push(
-                <div className={"item-" + val.name} key={i}>
-                  {val.name + (i + 1)}
-                </div>
+                <Output item={val} i={i}></Output>
               );
             }
             return vals;
           })}
         </div>
+        <button onClick={this.resetLayout} className="button">Reset</button>
       </div>
     );
   }

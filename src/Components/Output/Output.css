@@ -1,0 +1,38 @@
+.output {
+  display: block;
+  height: 200px;
+  width: 100px;
+  border: 1px solid;
+  margin: auto;
+  float: right;
+  flex-wrap: wrap;
+}
+
+.output .item-XL {
+  height: 50%;
+  width: 100%;
+  border-bottom: 1px black dashed;
+  box-sizing: border-box;
+  float: left;
+}
+
+.output .item-L {
+  height: 25%;
+  width: 100%;
+  border-bottom: 1px black dashed;
+  float: left;
+}
+
+.output .item-SM {
+  height: 25%;
+  width: 50%;
+  border-bottom: 1px black dashed;
+  border-right: 1px black dashed;
+  box-sizing: border-box;
+  float: left;
+}
+
+.button {
+  margin-top: 20px;
+
+}

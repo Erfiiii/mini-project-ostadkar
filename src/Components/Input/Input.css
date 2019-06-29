@@ -1,0 +1,13 @@
+.input {
+  display: block;
+  width: 100%;
+  float: left;
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select {
+  float: left;
+  position: relative;
+  font-family: Arial;
+}

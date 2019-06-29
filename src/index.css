@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  direction: ltr;
 }
 
 code {
@@ -14,59 +16,4 @@ code {
 
 .App {
   padding: 30px;
-}
-
-.input {
-  display: block;
-  width: 100%;
-  float: left;
-  position: relative;
-  font-family: Arial;
-}
-
-.custom-select {
-  float: left;
-  position: relative;
-  font-family: Arial;
-}
-
-.output {
-  display: block;
-  height: 200px;
-  width: 100px;
-  border: 1px solid;
-  margin: auto;
-  float: right;
-  /* display: flex; */
-  flex-wrap: wrap;
-  /* box-sizing: border-box; */
-}
-
-.output .item-XL {
-  height: 50%;
-  width: 100%;
-  border-bottom: 1px black dashed;
-  box-sizing: border-box;
-  float: left;
-}
-
-/* .output .item-XL:last-child {
-  border: none
-} */
-
-.output .item-L {
-  height: 25%;
-  width: 100%;
-  border-bottom: 1px black dashed;
-  box-sizing: border-box;
-  float: left;
-}
-
-.output .item-SM {
-  height: 25%;
-  width: 50%;
-  border-bottom: 1px black dashed;
-  border-right: 1px black dashed;
-  box-sizing: border-box;
-  float: left;
 }
