@@ -1,15 +1,23 @@
 import React from "react";
 import "./Input.css";
 
-const input = ({ onSelectChange }) => {
+const foo = (input) => {
+  const vals = []
+  input.forEach((value, key) => {
+      vals.push (<option key={key} value={key}>{key}</option>)
+    }
+  )
+  return vals
+}
+
+const input = ({ onSelectChange, layout }) => {
   return (
     <div className="custom-select">
       <span>Select: </span>
       <select onChange={onSelectChange} value="">
-        <option />
-        <option value="XL">XL</option>
-        <option value="L">L</option>
-        <option value="SM">SM</option>
+        {
+          foo(layout)                
+        }
       </select>
     </div>
   );
