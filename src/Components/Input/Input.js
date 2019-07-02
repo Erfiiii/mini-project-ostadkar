@@ -1,6 +1,7 @@
 import React from "react";
 import "./Input.css";
 
+// FOR RETURNING THE ARRAY FROM ITERATING
 const foo = (input) => {
   const vals = []
   input.forEach((value, key) => {
